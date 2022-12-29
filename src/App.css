@@ -1,0 +1,146 @@
+body{
+  background-color:white;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+.App{
+  min-height: 100vh;
+  min-width: 100vw;
+  background:url('../public/bg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.glass{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: rgba(102, 186, 255, 0.08);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.6px);
+-webkit-backdrop-filter: blur(1.6px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+.glass h1{
+  color: white;
+  width: 80%;
+  text-align: center;
+}
+input{
+width: 80%;
+height: 70px;
+font-size: 50px;
+border-radius: 70px;
+padding: 10px;
+border: none;
+text-align: center;
+box-shadow: 0px 0px 20px rgba(57, 9, 231, 0.884);
+background-color: #f8f8f8;
+margin-top: 20px;
+}
+
+.button{
+  width: 30%;
+  height: 70px;
+  background-color: #2a93d5;
+  margin-top: 50px;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+.button span{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  
+}
+.loading{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.2s;
+}
+
+.images{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color:rgba(255, 255, 255, 0.7);
+display: flex;
+transition: all 0.5s;
+flex-direction: column;
+}
+.images span{
+  font-weight: bolder;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.images h2{
+  text-align: center;
+}
+.images .image{
+  width:80%;
+  height: 200px;
+  background-color:white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.image img{
+  height: 160px;
+  width:100%;
+}
+.image a{
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .glass h1{
+    font-size: 30px;
+    width: 90%;
+  }
+  input{
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+  }
+  .button{
+    width: 50%;
+    height: 60px;
+  }
+}
