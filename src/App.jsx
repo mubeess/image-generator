@@ -77,21 +77,25 @@ function App() {
      <div style={{
       transform:modalOpen?"translateY(-1000px)":"translateY(0px)"
      }} className='images'>
-      <span onClick={()=>setModalOpen(true)}>X</span>
+      <span onClick={()=>{
+        setModalOpen(true)
+        setData([])
+      }}>X</span>
       <h2>Generated images</h2>
+      <div className='mainImage'>
       {
         data.length>0&&
         (
          data.map((dt,ind)=>(
       <div key={ind.toString()} className='image'>
       <img src={dt.url} alt='img'/>
-      <a onClick={()=>{
-       saveAs(dt.url, "image.jpg"); 
-      }} href='#'>Click here to download</a>
+      <a download  href={dt.url}>Click here to download</a>
       </div>
          ))
         )
       }
+      </div>
+     
       
       
      </div>
